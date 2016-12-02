@@ -1,0 +1,10 @@
+<div class="navBox">
+  <ul>
+    <li class="navTitle">Catalog - 目录</li>
+  {{#foreach navigation}}
+    <li class="navItem">
+      <a href="{{url absolute="true"}}" class="nav" onclick="navTo(this)">{{label}}</a>
+    </li>
+  {{/foreach}}
+  </ul>
+</div>

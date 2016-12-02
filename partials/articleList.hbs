@@ -1,0 +1,22 @@
+<div class="listBox">
+  {{#foreach posts}}
+    <article href="{{url}}" class="listItem {{post_class}}" onclick="loadBlog(this)">
+      <img src="{{asset "./image/arrow.png"}}" class="arrow">
+      <div class="title">
+        <h5>
+          <span>{{{title}}}</span>
+          <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+          <span>{{date format="YYYY-MM-DD"}}</span>
+        </h5>
+      </div>
+      <div class="preview">
+        <p>
+          {{excerpt characters="120"}}
+          <span>...</span>
+        </p>
+      </div>
+    </article>
+  {{/foreach}}
+</div>
+
+{{pagination}}
