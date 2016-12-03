@@ -1,0 +1,41 @@
+{{#post}}
+
+  <main>
+    <article class="{{post_class}}">
+
+      <header class="postTitle">
+        <h1>{{title}}</h1>
+        <section>
+          <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="YYYY-MM-DD"}}</time>
+        </section>
+      </header>
+
+      <section class="postBody">
+        {{content}}
+      </section>
+
+      {{!-- Links to Previous/Next posts --}}
+
+      <div class="otherPost">
+        {{#next_post}}
+          <div class="prevPost">
+            <a href="{{url}}">
+              <img src="{{asset "./image/arrowL.png"}}" class="arrow">
+              <h5><span>Prev: </span>{{title}}</h5>
+            </a>
+          </div>
+        {{/next_post}}
+        {{#prev_post}}
+          <div class="nextPost">
+            <a href="{{url}}">
+              <h5><span>Next: </span>{{title}}</h5>
+              <img src="{{asset "./image/arrowR.png"}}" class="arrow">
+            </a>
+          </div>
+        {{/prev_post}}
+      </div>
+
+    </article>
+  </main>
+
+{{/post}}
