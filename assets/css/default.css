@@ -34,6 +34,16 @@ li {
   margin-left: 1em;
 }
 
+blockquote {
+  padding: 0 1em;
+  margin: 2em 0;
+  border-left: solid 8px #dfe1e3 ;
+}
+
+blockquote p {
+  font-size: 16px;
+}
+
 /*index page*/
 
 .indexBox {
