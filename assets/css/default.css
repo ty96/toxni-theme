@@ -210,3 +210,25 @@ li {
   display: inline-block;
   float: right;
 }
+
+/*author page*/
+
+.portrait {
+  width: 200px;
+  margin: auto;
+  text-align: center;
+}
+
+.portrait img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.userAgent {
+  text-align: center;
+}
+
+.ip {
+  text-align: center;
+}
