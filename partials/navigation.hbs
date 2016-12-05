@@ -1,9 +1,9 @@
 <div class="navBox">
   <ul>
-    <li class="navTitle">Catalog - 目录</li>
+    <li class="navTitle" id="catalog">Catalog - 目录</li>
   {{#foreach navigation}}
     <li class="navItem">
-      <a href="{{url absolute="true"}}" class="nav" onclick="navTo(this)">{{label}}</a>
+      <a href="{{url absolute="true"}}" class="nav">{{label}}</a>
     </li>
   {{/foreach}}
   </ul>

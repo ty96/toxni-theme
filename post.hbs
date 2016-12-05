@@ -1,15 +1,6 @@
 {{!< default}}
 
-<div class="indexBox">
-  <div class="fix">
-    <div class="menu">
-      <a href="#"><img src="{{asset "./image/menu.png"}}" title="showMenu"></a>
-      <div class="toggleMenu">
-        {{navigation}}
-      </div>
-    </div>
-    <a href="#"><img src="{{asset "./image/top.png"}}" title="toTop"></a>
-  </div>
-
+<div class="indexBox" id="indexBox">
+{{> "sideNav"}}
 {{> "articleView"}}
 </div>
