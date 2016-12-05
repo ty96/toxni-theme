@@ -119,3 +119,9 @@ pre[class*="language-"] {
 .token.entity {
 	cursor: help;
 }
+
+@media (max-width: 640px) {
+	pre[class*="language-"] {
+	  padding: 1em;
+	}
+}

@@ -4,6 +4,13 @@
   var indexBox = document.getElementById('indexBox')
   var catalog = document.getElementById('catalog')
   var liList = catalog.parentNode.children
+  var toggleMenu = document.getElementsByClassName('toggleMenu')[0]
+
+  if (!!toggleMenu && window.innerWidth <= 640) {
+    toggleMenu.innerHTML = ''
+    catalog = document.getElementById('catalog')
+    liList = catalog.parentNode.children
+  }
 
 
   var userAgentVal = navigator.userAgent
@@ -24,6 +31,7 @@
 
   ;(function () {
     if (!!catalog && window.innerWidth <= 640) {
+      console.log(catalog)
       catalog.onclick = function () {
         if (liList[1].style.display == 'block') {
           for (var i = 1; i < liList.length; i++) {

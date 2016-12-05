@@ -284,6 +284,10 @@ p>img, .mobile {
   text-align: center;
 }
 
+.mobileOnly {
+  display: none;
+}
+
 /*adaption for different devices*/
 @media (max-width: 1366px) {
   .fix {
@@ -320,6 +324,10 @@ p>img, .mobile {
 
   pre {
     padding-left: 1em;
+  }
+
+  .mobileOnly {
+    display: block;
   }
 
   .indexBox {
