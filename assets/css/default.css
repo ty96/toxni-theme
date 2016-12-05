@@ -303,6 +303,10 @@ p>img, .mobile {
   .author-template .fix img {
     display: none;
   }
+
+  .cas {
+    display: none;
+  }
 }
 
 @media (max-width: 640px) {
@@ -355,7 +359,7 @@ p>img, .mobile {
     padding: 0 20px;
   }
 
-  .listItem .arrow {
+  .listItem:hover .arrow {
     display: none;
   }
 

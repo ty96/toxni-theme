@@ -25,14 +25,14 @@
   ;(function () {
     if (!!catalog && window.innerWidth <= 640) {
       catalog.onclick = function () {
-        if (liList[1].style.display == 'none') {
+        if (liList[1].style.display == 'block') {
           for (var i = 1; i < liList.length; i++) {
-            liList[i].style.display = 'block'
+            liList[i].style.display = 'none'
           }
         }
         else {
           for (var i = 1; i < liList.length; i++) {
-            liList[i].style.display = 'none'
+            liList[i].style.display = 'block'
           }
         }
       }
