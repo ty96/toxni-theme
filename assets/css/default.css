@@ -31,15 +31,22 @@ p, li, time, tr, td {
 }
 
 ol {
-  margin: 30px;
+  margin: 20px 0;
 }
 
 li {
-  margin-left: 3em;
+  margin-left: 30px;
 }
 
 em {
-  margin: 2em 0;
+  margin: 20px;
+  display: block;
+  color: #aaaaaa;
+}
+
+mark {
+  color: #357ca0;
+  background: #dddddd;
 }
 
 blockquote {
