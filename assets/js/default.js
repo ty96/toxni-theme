@@ -161,64 +161,97 @@
       //OSImg.src = '/assets/image/' + System[0].toLowerCase() + '.png'
       //BSImg.src = '/assets/image/' + Browser[0].toLowerCase() + '.png'
     }
-
-    //personal info
-    ;(function () {
-      var content = ''
-      var info = personalInfo
-      var PIBox = document.getElementById('PIBox')
-      if (!!PIBox) {
-        document.getElementsByTagName('title')[0].innerText = 'About Me'
-        for (var index in info) {
-          var temp = '<p><span>' + index +': </span>' + info[index] +'</p>'
-          content = content + temp
-        }
-        PIBox.innerHTML = content
-      }
-    })()
-
-    //book list
-    ;(function () {
-      var content = ''
-      var books = personalBooks
-      var bookBox = document.getElementById('bookBox')
-      if (!!bookBox) {
-        for (var i = 0; i < books.length; i++) {
-          var tempT = '<h3>' + books[i].name +'</h3>'
-          var tempI = '<img src="' + books[i].image + '">'
-          var tempP = '<p>' + books[i].comment + '</p>'
-
-          if (!books[i].comment) {
-            tempP = '<p></p>'
-          }
-
-          var temp = '<div>' + tempT + tempI + tempP + '</div>'
-          content = content + temp
-        }
-        bookBox.innerHTML = content
-      }
-    })()
-
-    //game collection
-    ;(function () {
-      var content = ''
-      var games = personalGames
-      var gameBox = document.getElementById('gameBox')
-      if (!!gameBox) {
-        for (var i = 0; i < games.length; i++) {
-          var tempT = '<h3>' + games[i].name +'</h3>'
-          var tempI = '<img src="' + games[i].image + '">'
-          var tempP = '<p>' + games[i].comment + '</p>'
-
-          if (!games[i].comment) {
-            tempP = '<p></p>'
-          }
-
-          var temp = '<div>' + tempT + tempI + tempP + '</div>'
-          content = content + temp
-        }
-        gameBox.innerHTML = content
-      }
-    })()
   })()
+
+  //personal info
+  ;(function () {
+    var content = ''
+    var info = personalInfo
+    var PIBox = document.getElementById('PIBox')
+    if (!!PIBox) {
+      document.getElementsByTagName('title')[0].innerText = 'About Me'
+      for (var index in info) {
+        var temp = '<p><span>' + index +': </span>' + info[index] +'</p>'
+        content = content + temp
+      }
+      PIBox.innerHTML = content
+    }
+  })()
+
+  //book list
+  ;(function () {
+    var content = ''
+    var books = personalBooks
+    var bookBox = document.getElementById('bookBox')
+    if (!!bookBox) {
+      for (var i = 0; i < books.length; i++) {
+        var tempT = '<h3>' + books[i].name +'</h3>'
+        var tempI = '<img src="' + books[i].image + '">'
+        var tempP = '<p>' + books[i].comment + '</p>'
+
+        if (!books[i].comment) {
+          tempP = '<p></p>'
+        }
+
+        var temp = '<div>' + tempT + tempI + tempP + '</div>'
+        content = content + temp
+      }
+      bookBox.innerHTML = content
+    }
+  })()
+
+  //game collection
+  ;(function () {
+    var content = ''
+    var games = personalGames
+    var gameBox = document.getElementById('gameBox')
+    if (!!gameBox) {
+      for (var i = 0; i < games.length; i++) {
+        var tempT = '<h3>' + games[i].name +'</h3>'
+        var tempI = '<img src="' + games[i].image + '">'
+        var tempP = '<p>' + games[i].comment + '</p>'
+
+        if (!games[i].comment) {
+          tempP = '<p></p>'
+        }
+
+        var temp = '<div>' + tempT + tempI + tempP + '</div>'
+        content = content + temp
+      }
+      gameBox.innerHTML = content
+    }
+  })()
+
+  //count down
+  ;(function () {
+    var box = document.getElementsByClassName('countDown')[0];
+    if (!!box) {
+      var
+        day = document.getElementsByClassName('day')[0],
+        hour = document.getElementsByClassName('hour')[0],
+        minute = document.getElementsByClassName('minute')[0],
+        second = document.getElementsByClassName('second')[0];
+
+      var startUp = 'Mon Jul 20 2015 20:00:00 GMT+0800 (CST)';
+      var startUpS = new Date(startUp).getTime();
+
+      var timer = function () {
+        var now = new Date().getTime();
+        var range = parseInt((now - startUpS) / 1000);
+        var
+          s = range % 60,
+          m = ((range - s) / 60) % 60,
+          h = ((range - s - m * 60) / 3600) % 24,
+          d = ((range - s - m * 60 - h * 3600) / (3600 * 24));
+
+        second.innerText = s;
+        minute.innerText = m;
+        hour.innerText = h;
+        day.innerText = d;
+      };
+
+      timer();
+      setInterval(timer, 1000)
+    }
+  })();
 })()

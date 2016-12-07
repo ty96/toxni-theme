@@ -309,6 +309,13 @@ p>img, .mobile {
   display: none;
 }
 
+.PIFather {
+  padding: 10px 20px;
+  margin: 50px 0;
+  border-radius: 30px;
+  background: url("../image/preBG.png") repeat;
+}
+
 .PIBox span {
   width: 100px;
   overflow-x: hidden;
@@ -330,7 +337,7 @@ p>img, .mobile {
 }
 
 .personalBox>div {
-  width: 380px;
+  width: 360px;
   margin: 10px;
   display: inline-block;
   vertical-align: top;
@@ -350,6 +357,24 @@ p>img, .mobile {
 .gameBox img {
   width: 250px;
   height: 100px;
+}
+
+.countDown {
+  margin: auto;
+  text-align: center;
+}
+
+.countDown h3 {
+  margin: 50px 0;
+}
+
+.countBlock {
+  width: 160px;
+  display: inline-block;
+}
+
+.countBlock p {
+  color: #357ca0;
 }
 
 /*adaption for different devices*/
@@ -475,5 +500,29 @@ p>img, .mobile {
     width: auto;
     margin: 50px auto;
     display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .countBlock {
+    width: 80px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .unit {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .countBlock {
+    width: 60px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .unit {
+    font-size: 8px;
   }
 }
