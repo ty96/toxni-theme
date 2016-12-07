@@ -13,7 +13,7 @@ body {
 }
 
 a, a:hover, a:active, a:visited {
-  color: inherit;
+  color: #357ca0;
   text-decoration: none;
 }
 
@@ -60,7 +60,7 @@ blockquote p {
 }
 
 code {
-  color: #f92672;
+  color: #ca835f;
 }
 
 table {
