@@ -292,12 +292,13 @@ p>img, .mobile {
   border-radius: 50%;
 }
 
-.userAgent {
+.UABox {
   text-align: center;
 }
 
-.ip {
+.userAgent {
   text-align: center;
+  display: inline-block;
 }
 
 .mobileOnly {

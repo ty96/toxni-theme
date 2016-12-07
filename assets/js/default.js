@@ -1,6 +1,6 @@
 ;(function () {
 
-  //DOM Operation
+  //DOM Operations
 
   ;(function () {
     var userAgentBox = document.getElementById('userAgent')
@@ -97,5 +97,57 @@
     setTimeout(function () {
       e()
     }, 100)
+  })()
+
+  //match userAgent
+
+  ;(function () {
+    var OSBox = document.getElementById('OSBox')
+    var BSBox = document.getElementById('BSBox')
+    var OSImg = document.getElementById('OSImg')
+    var BSImg = document.getElementById('BSImg')
+
+    var Systems = ['Macintosh', 'Windows','Android', 'iPad',  'iPhone','Ubuntu', 'Linux']
+    var Browsers = [ 'Trident', 'MicroMessenger', 'QQ', 'Edge', 'Opera', 'Chrome', 'Firefox', 'Safari']
+    var System = []
+    var Browser = []
+
+    var UA = navigator.userAgent
+    
+    function compare(UA, Result, Arr) {
+      Arr.forEach(function (ele) {
+        if (!!UA.match(ele) && !Result.length) {
+          Result.push(ele)
+        }
+      })
+    }
+
+    compare(UA, System, Systems)
+    compare(UA, Browser, Browsers)
+
+    //change name
+    if (System[0] == 'Macintosh') {
+      System[0] = 'Mac OS X'
+    }
+
+    if (Browser[0] == 'Trident') {
+      Browser[0] = '万恶的 IE'
+    }
+
+    if (Browser[0] == 'MicroMessenger') {
+      Browser[0] = '微信内置浏览器'
+    }
+
+    if (Browser[0] == 'QQ') {
+      Browser[0] = 'QQ浏览器'
+    }
+
+    if (!!OSBox && !!BSBox) {
+      OSBox.innerText = '我猜你在用「 ' + System[0]
+      BSBox.innerText = ' - ' + Browser[0] + '」'
+      //TODO
+      //OSImg.src = '/assets/image/' + System[0].toLowerCase() + '.png'
+      //BSImg.src = '/assets/image/' + Browser[0].toLowerCase() + '.png'
+    }
   })()
 })()
