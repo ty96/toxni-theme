@@ -168,6 +168,7 @@
       var info = personalInfo
       var PIBox = document.getElementById('PIBox')
       if (!!PIBox) {
+        document.getElementsByTagName('title')[0].innerText = 'About Me'
         for (var index in info) {
           var temp = '<p><span>' + index +': </span>' + info[index] +'</p>'
           content = content + temp
