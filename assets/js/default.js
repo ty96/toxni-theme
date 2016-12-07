@@ -1,37 +1,39 @@
 ;(function () {
-  var userAgentBox = document.getElementById('userAgent')
-  var ipBox = document.getElementById('ip')
-  var indexBox = document.getElementById('indexBox')
-  var catalog = document.getElementById('catalog')
-  var liList = catalog.parentNode.children
-  var toggleMenu = document.getElementsByClassName('toggleMenu')[0]
 
-  if (!!toggleMenu && window.innerWidth <= 640) {
-    toggleMenu.innerHTML = ''
-    catalog = document.getElementById('catalog')
-    liList = catalog.parentNode.children
-  }
+  //DOM Opration
 
+  ;(function () {
+    var userAgentBox = document.getElementById('userAgent')
+    var ipBox = document.getElementById('ip')
+    var indexBox = document.getElementById('indexBox')
+    var catalog = document.getElementById('catalog')
+    var liList = catalog.parentNode.children
+    var toggleMenu = document.getElementsByClassName('toggleMenu')[0]
+    var userAgentVal = navigator.userAgent
+    var ip = window.returnCitySN.cip
 
-  var userAgentVal = navigator.userAgent
-  var ip = window.returnCitySN.cip
+    if (!!toggleMenu && window.innerWidth <= 640) {
+      toggleMenu.innerHTML = ''
+      catalog = document.getElementById('catalog')
+      liList = catalog.parentNode.children
+    }
 
-  if (!!userAgentBox) {
-    userAgentBox.innerText = userAgentVal
-  }
+    if (!!userAgentBox) {
+      userAgentBox.innerText = userAgentVal
+    }
 
-  if (!!ipBox) {
-    document.getElementById("ip").innerText = ip
-  }
+    if (!!ipBox) {
+      document.getElementById("ip").innerText = ip
+    }
 
-  if (!!indexBox) {
-    indexBox.style.marginTop = '50px'
-    indexBox.style.opacity = 1
-  }
+    if (!!indexBox) {
+      indexBox.style.marginTop = '50px'
+      indexBox.style.opacity = 1
+    }
+  })()
 
   ;(function () {
     if (!!catalog && window.innerWidth <= 640) {
-      console.log(catalog)
       catalog.onclick = function () {
         if (liList[1].style.display == 'block') {
           for (var i = 1; i < liList.length; i++) {
@@ -47,6 +49,7 @@
     }
   })()
 
+  //Background Canvas
 
   ;(function bgImage() {
     function A() {

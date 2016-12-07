@@ -23,15 +23,23 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-p, li, time {
+p, li, time, tr, td {
   font-size: 14px;
   line-height: 1.8em;
   color: #888888;
   font-weight: normal;
 }
 
+ol {
+  margin: 30px;
+}
+
 li {
-  margin-left: 1em;
+  margin-left: 3em;
+}
+
+em {
+  margin: 2em 0;
 }
 
 blockquote {
@@ -50,6 +58,7 @@ code {
 
 table {
   width: 100%;
+  margin: 30px 0;
 }
 
 tr, th, td {
