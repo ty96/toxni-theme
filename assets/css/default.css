@@ -13,7 +13,7 @@ body {
 }
 
 a, a:hover, a:active, a:visited {
-  color: #357ca0;
+  color: #669900;
   text-decoration: none;
 }
 
@@ -305,6 +305,41 @@ p>img, .mobile {
   display: none;
 }
 
+.PIBox span {
+  width: 100px;
+  overflow-x: hidden;
+  display: inline-block;
+  color: #357ca0;
+  vertical-align: bottom;
+}
+
+.bookBox {
+  margin: 20px 0 50px 0;
+}
+
+.bookBox img {
+  width: 250px;
+  height: 320px;
+  max-width: 100%;
+  margin: 20px auto;
+  border: solid 1px #666666;
+  box-shadow: 10px 5px 25px #cccccc;
+  display: block;
+}
+
+.bookBox>div {
+  width: 380px;
+  margin: 10px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.bookBox p {
+  max-width: 340px;
+  margin: auto;
+}
+
 /*adaption for different devices*/
 @media (max-width: 1366px) {
   .fix {
@@ -410,5 +445,9 @@ p>img, .mobile {
 
   .nextPost img {
     display: none;
+  }
+
+  .UA {
+    margin-top: 30px;
   }
 }

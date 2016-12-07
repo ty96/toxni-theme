@@ -11,11 +11,23 @@
     var toggleMenu = document.getElementsByClassName('toggleMenu')[0]
     var userAgentVal = navigator.userAgent
     var ip = window.returnCitySN.cip
+    var toTop = document.getElementById('toTop')
 
     if (!!toggleMenu && window.innerWidth <= 640) {
       toggleMenu.innerHTML = ''
       catalog = document.getElementById('catalog')
       liList = catalog.parentNode.children
+    }
+
+    if (!!toTop) {
+      toTop.onclick = function () {
+        var scroll = setInterval(function () {
+          document.body.scrollTop = document.body.scrollTop - 50
+          if (document.body.scrollTop == 0) {
+            clearInterval(scroll)
+          }
+        }, 5)
+      }
     }
 
     if (!!userAgentBox) {
@@ -107,7 +119,7 @@
     var OSImg = document.getElementById('OSImg')
     var BSImg = document.getElementById('BSImg')
 
-    var Systems = ['Macintosh', 'Windows','Android', 'iPad',  'iPhone','Ubuntu', 'Linux']
+    var Systems = ['Macintosh', 'Windows', 'Android', 'iPad', 'iPhone', 'Ubuntu', 'Linux']
     var Browsers = [ 'Trident', 'MicroMessenger', 'QQ', 'Edge', 'Opera', 'Chrome', 'Firefox', 'Safari']
     var System = []
     var Browser = []
@@ -143,11 +155,48 @@
     }
 
     if (!!OSBox && !!BSBox) {
-      OSBox.innerText = '我猜你在用「 ' + System[0]
-      BSBox.innerText = ' - ' + Browser[0] + '」'
+      OSBox.innerText = System[0]
+      BSBox.innerText = Browser[0]
       //TODO
       //OSImg.src = '/assets/image/' + System[0].toLowerCase() + '.png'
       //BSImg.src = '/assets/image/' + Browser[0].toLowerCase() + '.png'
     }
+
+    //personal info
+    ;(function () {
+      var content = ''
+      var info = personalInfo
+      var PIBox = document.getElementById('PIBox')
+      if (!!PIBox) {
+        for (var index in info) {
+          var temp = '<p><span>' + index +': </span>' + info[index] +'</p>'
+          content = content + temp
+        }
+        PIBox.innerHTML = content
+      }
+    })()
+
+    //book list
+    ;(function () {
+      var content = ''
+      var books = personalBooks
+      var bookBox = document.getElementById('bookBox')
+      if (!!bookBox) {
+        for (var i = 0; i < books.length; i++) {
+          var tempT = '<h3>' + books[i].name +'</h3>'
+          var tempI = '<img src="' + books[i].image + '">'
+          var tempP = '<p>' + books[i].comment + '</p>'
+
+          if (!books[i].comment) {
+            tempP = '<p></p>'
+          }
+
+          var temp = '<div>' + tempT + tempI + tempP + '</div>'
+          content = content + temp
+        }
+        bookBox.innerHTML = content
+      }
+    })()
+
   })()
 })()
