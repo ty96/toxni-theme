@@ -317,21 +317,19 @@ p>img, .mobile {
   vertical-align: bottom;
 }
 
-.bookBox {
+.personalBox {
   margin: 20px 0 50px 0;
 }
 
-.bookBox img {
-  width: 250px;
-  height: 320px;
+.personalBox img {
   max-width: 100%;
   margin: 20px auto;
-  border: solid 1px #666666;
-  box-shadow: 10px 5px 25px #cccccc;
+  border: solid 1px #eeeeee;
+  box-shadow: 10px 5px 25px #eeeeee;
   display: block;
 }
 
-.bookBox>div {
+.personalBox>div {
   width: 380px;
   margin: 10px;
   display: inline-block;
@@ -339,9 +337,19 @@ p>img, .mobile {
   text-align: center;
 }
 
-.bookBox p {
+.personalBox p {
   max-width: 340px;
   margin: auto;
+}
+
+.bookBox img {
+  width: 250px;
+  height: 320px;
+}
+
+.gameBox img {
+  width: 250px;
+  height: 100px;
 }
 
 /*adaption for different devices*/
@@ -453,5 +461,19 @@ p>img, .mobile {
 
   .UA {
     margin-top: 30px;
+  }
+
+  .PI {
+    margin: 20px;
+  }
+
+  .PIBox span {
+    width: 60px;
+  }
+
+  .personalBox>div {
+    width: auto;
+    margin: 50px auto;
+    display: block;
   }
 }

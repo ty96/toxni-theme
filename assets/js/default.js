@@ -198,5 +198,26 @@
       }
     })()
 
+    //game collection
+    ;(function () {
+      var content = ''
+      var games = personalGames
+      var gameBox = document.getElementById('gameBox')
+      if (!!gameBox) {
+        for (var i = 0; i < games.length; i++) {
+          var tempT = '<h3>' + games[i].name +'</h3>'
+          var tempI = '<img src="' + games[i].image + '">'
+          var tempP = '<p>' + games[i].comment + '</p>'
+
+          if (!games[i].comment) {
+            tempP = '<p></p>'
+          }
+
+          var temp = '<div>' + tempT + tempI + tempP + '</div>'
+          content = content + temp
+        }
+        gameBox.innerHTML = content
+      }
+    })()
   })()
 })()
