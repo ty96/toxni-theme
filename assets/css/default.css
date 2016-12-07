@@ -312,6 +312,7 @@ p>img, .mobile {
 .PIFather {
   padding: 10px 20px;
   margin: 50px 0;
+  border: solid 1px #eeeeee;
   border-radius: 30px;
   background: url("../image/preBG.png") repeat;
 }
@@ -337,7 +338,7 @@ p>img, .mobile {
 }
 
 .personalBox>div {
-  width: 360px;
+  width: 350px;
   margin: 10px;
   display: inline-block;
   vertical-align: top;
