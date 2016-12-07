@@ -1,6 +1,6 @@
 ;(function () {
 
-  //DOM Opration
+  //DOM Operation
 
   ;(function () {
     var userAgentBox = document.getElementById('userAgent')
@@ -30,9 +30,7 @@
       indexBox.style.marginTop = '50px'
       indexBox.style.opacity = 1
     }
-  })()
 
-  ;(function () {
     if (!!catalog && window.innerWidth <= 640) {
       catalog.onclick = function () {
         if (liList[1].style.display == 'block') {
