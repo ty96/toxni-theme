@@ -12,12 +12,8 @@ body {
   overflow-x: hidden;
 }
 
-a {
-  color: #669900;
-}
-
 a, a:hover, a:active, a:visited {
-  color: inherit;
+  color: #669900;
   text-decoration: none;
 }
 
@@ -153,7 +149,11 @@ p>img, .mobile {
   color: #888888;
 }
 
-.navItem a {
+.navItem a,
+.navItem a:hover,
+.navItem a:active,
+.navItem a:visited
+{
   color: #357ca0;
 }
 
