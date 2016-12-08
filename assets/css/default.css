@@ -81,6 +81,10 @@ p>img, .mobile {
   display: block;
 }
 
+p>h1, p>h2, p>h3, p>h4, p>h5, p>h6 {
+  margin: 2em 0;
+}
+
 .defaultColor {
   color: #357ca0
 }
