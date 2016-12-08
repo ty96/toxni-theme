@@ -81,10 +81,6 @@ p>img, .mobile {
   display: block;
 }
 
-p>h1, p>h2, p>h3, p>h4, p>h5, p>h6 {
-  margin: 2em 0;
-}
-
 .defaultColor {
   color: #357ca0
 }
@@ -206,6 +202,13 @@ p>h1, p>h2, p>h3, p>h4, p>h5, p>h6 {
   position: relative;
 }
 
+.pagination a,
+.pagination a:hover,
+.pagination a:active,
+.pagination a:visited {
+  color: #357ca0;
+}
+
 .page-number {
   width: 200px;
   position: absolute;
@@ -243,11 +246,13 @@ p>h1, p>h2, p>h3, p>h4, p>h5, p>h6 {
 .fix {
   position: fixed;
   right: 10%;
-  bottom: 15%;
+  bottom: 10%;
 }
 
 .fix img {
+  width: 100px;
   height: 100px;
+  padding: 50px;
 }
 
 .menu {
@@ -260,8 +265,9 @@ p>h1, p>h2, p>h3, p>h4, p>h5, p>h6 {
 
 .toggleMenu {
   top: -300px;
-  left: -80px;
+  left: -50px;
   position: absolute;
+  z-index: -1;
   display: none;
 }
 
@@ -399,7 +405,9 @@ p>h1, p>h2, p>h3, p>h4, p>h5, p>h6 {
 
 @media (max-width: 1260px) {
   .fix img {
+    width: 50px;
     height: 50px;
+    padding: 0;
   }
 
   .menu:hover .toggleMenu {
