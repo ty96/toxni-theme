@@ -23,10 +23,10 @@
       toTop.onclick = function () {
         var scroll = setInterval(function () {
           document.body.scrollTop = document.body.scrollTop - 50
-          if (document.body.scrollTop == 0) {
+          if (document.body.scrollTop <= 0) {
             clearInterval(scroll)
           }
-        }, 5)
+        }, 2)
       }
     }
 
