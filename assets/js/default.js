@@ -13,7 +13,7 @@
     var ip = window.returnCitySN.cip
     var toTop = document.getElementById('toTop')
 
-    if (!!toggleMenu && window.innerWidth <= 640) {
+    if (!!toggleMenu && window.innerWidth <= 960) {
       toggleMenu.innerHTML = ''
       catalog = document.getElementById('catalog')
       liList = catalog.parentNode.children
@@ -253,5 +253,22 @@
       timer();
       setInterval(timer, 1000)
     }
-  })();
+  })()
+
+  ;(function () {
+    var invisible = document.getElementsByClassName('invisible')
+
+    if (!!invisible.length && window.innerWidth <= 768) {
+      for (var i = 0; i < invisible.length; i++) {
+        invisible[i].onclick = function () {
+          if (this.style.background == 'none') {
+            this.style.background = '#888888'
+          }
+          else {
+            this.style.background = 'none'
+          }
+        }
+      }
+    }
+  })()
 })()
