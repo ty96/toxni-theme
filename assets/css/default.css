@@ -85,6 +85,14 @@ p>img, .mobile {
   color: #357ca0
 }
 
+.invisible {
+  background: #888888;
+}
+
+.invisible:hover {
+  background: none;
+}
+
 /*index page*/
 .indexBox {
   width: 800px;
