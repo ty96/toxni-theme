@@ -119,7 +119,7 @@
     var OSImg = document.getElementById('OSImg')
     var BSImg = document.getElementById('BSImg')
 
-    var Systems = ['Macintosh', 'Windows', 'Android', 'iPad', 'iPhone', 'Ubuntu', 'Linux']
+    var Systems = ['Windows', 'Android', 'iPad', 'iPhone', 'Mac OS X', 'Ubuntu', 'Linux']
     var Browsers = [ 'Trident', 'MicroMessenger', 'QQ', '360', 'Alipay', 'Edge', 'OPR', 'Chrome', 'Firefox', 'Safari']
     var System = []
     var Browser = []
@@ -138,9 +138,6 @@
     compare(UA, Browser, Browsers)
 
     //change name
-    if (System[0] == 'Macintosh') {
-      System[0] = 'Mac OS X'
-    }
 
     if (Browser[0] == 'Trident') {
       Browser[0] = '万恶的 IE'
@@ -231,39 +228,54 @@
     }
   })()
 
-  //count down
-  ;(function () {
-    var box = document.getElementsByClassName('countDown')[0];
-    if (!!box) {
-      var
-        day = document.getElementsByClassName('day')[0],
+  //counter
+  ;(function (countName, countStart, isShown) {
+    var box = document.getElementsByClassName('countDown')[0]
+    var countNameBox = document.getElementById('countName')
+
+    if (!countName) {
+      countName = 'You can change me and the start time of counter in code ejection'
+    }
+
+    if (!countStart) {
+      countStart = 'Mon Jul 20 2015 20:00:00 GMT+0800 (CST)'
+    }
+
+    if (!isShown) {
+      box.style.display = 'none'
+    }
+
+    countNameBox.innerHTML = countName
+
+    if (!!box && !!isShown) {
+      var day = document.getElementsByClassName('day')[0],
         hour = document.getElementsByClassName('hour')[0],
         minute = document.getElementsByClassName('minute')[0],
-        second = document.getElementsByClassName('second')[0];
+        second = document.getElementsByClassName('second')[0]
 
-      var startUp = 'Mon Jul 20 2015 20:00:00 GMT+0800 (CST)';
-      var startUpS = new Date(startUp).getTime();
+      var startUpS = new Date(countStart).getTime()
 
       var timer = function () {
-        var now = new Date().getTime();
-        var range = parseInt((now - startUpS) / 1000);
+        var now = new Date().getTime()
+        var range = parseInt((now - startUpS) / 1000)
         var
           s = range % 60,
           m = ((range - s) / 60) % 60,
           h = ((range - s - m * 60) / 3600) % 24,
-          d = ((range - s - m * 60 - h * 3600) / (3600 * 24));
+          d = ((range - s - m * 60 - h * 3600) / (3600 * 24))
 
-        second.innerText = s;
-        minute.innerText = m;
-        hour.innerText = h;
-        day.innerText = d;
-      };
+        second.innerText = s
+        minute.innerText = m
+        hour.innerText = h
+        day.innerText = d
+      }
 
-      timer();
+      timer()
       setInterval(timer, 1000)
     }
-  })()
+  })(counter.countName, counter.countStart, counter.isShown)
 
+  //invisible style on mobiles
   ;(function () {
     var invisible = document.getElementsByClassName('invisible')
 
