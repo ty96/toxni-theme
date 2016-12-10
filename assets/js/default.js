@@ -120,7 +120,7 @@
     var BSImg = document.getElementById('BSImg')
 
     var Systems = ['Macintosh', 'Windows', 'Android', 'iPad', 'iPhone', 'Ubuntu', 'Linux']
-    var Browsers = [ 'Trident', 'MicroMessenger', 'QQ', 'Edge', 'Opera', 'Chrome', 'Firefox', 'Safari']
+    var Browsers = [ 'Trident', 'MicroMessenger', 'QQ', '360', 'Alipay', 'Edge', 'OPR', 'Chrome', 'Firefox', 'Safari']
     var System = []
     var Browser = []
 
@@ -154,12 +154,21 @@
       Browser[0] = 'QQ浏览器'
     }
 
+    if (Browser[0] == '360') {
+      Browser[0] = '360浏览器'
+    }
+
+    if (Browser[0] == 'Alipay') {
+      Browser[0] = '支付宝'
+    }
+
+    if (Browser[0] == 'OPR') {
+      Browser[0] = 'Opera'
+    }
+
     if (!!OSBox && !!BSBox) {
       OSBox.innerText = System[0]
       BSBox.innerText = Browser[0]
-      //TODO
-      //OSImg.src = '/assets/image/' + System[0].toLowerCase() + '.png'
-      //BSImg.src = '/assets/image/' + Browser[0].toLowerCase() + '.png'
     }
   })()
 
