@@ -235,6 +235,7 @@
 
     if (!countName) {
       countName = 'You can change me and the start time of counter in code ejection'
+      countNameBox.innerHTML = countName
     }
 
     if (!countStart) {
@@ -244,8 +245,6 @@
     if (!isShown) {
       box.style.display = 'none'
     }
-
-    countNameBox.innerHTML = countName
 
     if (!!box && !!isShown) {
       var day = document.getElementsByClassName('day')[0],
