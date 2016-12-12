@@ -102,7 +102,7 @@
     window.onmouseout = function (A) {
       a.x = null, a.y = null
     }
-    for (var n = [], r = 0; 150 > r; r++) {
+    for (var n = [], r = 0; 100 > r; r++) {
       var l = Math.random() * t.width, s = Math.random() * t.height, d = 2 * Math.random() - 1, c = 2 * Math.random() - 1
       n.push({x: l, y: s, xa: d, ya: c, max: 6e3})
     }

@@ -100,7 +100,7 @@ p>img, .mobile {
   margin: 200px auto 50px auto;
   border-top: solid 4px #357ca0;
   border-bottom: solid 4px #357ca0;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.85);
   transition: all 0.5s ease 0s;
 }
 
@@ -229,7 +229,7 @@ p>img, .mobile {
   top: 0;
   left: 0;
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 /*post page*/
