@@ -34,8 +34,8 @@
       userAgentBox.innerText = userAgentVal
     }
 
-    if (!!ipBox) {
-      document.getElementById("ip").innerText = ip
+    if (ipBox && ip) {
+        ipBox.innerText = ip
     }
 
     if (!!indexBox) {
@@ -172,7 +172,7 @@
   //personal info
   ;(function () {
     var content = ''
-    var info = personalInfo
+    var info = personalInfo || {}
     var PIBox = document.getElementById('PIBox')
     if (!!PIBox) {
       document.getElementsByTagName('title')[0].innerText = 'About Me'
@@ -187,7 +187,7 @@
   //book list
   ;(function () {
     var content = ''
-    var books = personalBooks
+    var books = personalBooks || []
     var bookBox = document.getElementById('bookBox')
     if (!!bookBox) {
       for (var i = 0; i < books.length; i++) {
@@ -209,7 +209,7 @@
   //game collection
   ;(function () {
     var content = ''
-    var games = personalGames
+    var games = personalGames || []
     var gameBox = document.getElementById('gameBox')
     if (!!gameBox) {
       for (var i = 0; i < games.length; i++) {
