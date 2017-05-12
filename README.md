@@ -32,6 +32,53 @@ Original article: [http://toxni.com/theme/](http://toxni.com/theme/)
 2. `Clone or Download -> Download Zip `
 3. GO to your `Ghost` admin panel，`General -> Upload A Theme`, that's it.
 
+## Code Injection
+
+注意，你需要去后台 Code Injection 注入以下代码，这些信息将会展示到作者信息页。
+
+```js
+<script>  
+var personalInfo = {  
+  School: '电子科技大学(985, 211)',
+  Major: '网络工程',
+  Steam: '<a href="http://steamcommunity.com/id/toxni" target=_blank>http://steamcommunity.com/id/toxni</a>',
+  Github: '<a href="https://github.com/toxni" target=_blank>https://github.com/toxni</a>',
+}
+
+var personalBooks = [  
+  {
+    name: '《Javascript权威指南》',
+    image: 'https://img3.doubanio.com/lpic/s8958854.jpg',
+    comment: '前端届的新华字典，常放在手边翻阅。'
+  },
+  {
+    name: '《JavaScript语言精粹》',
+    image: 'https://img3.doubanio.com/lpic/s3651235.jpg',
+    comment: '',
+  },
+]
+
+var personalGames = [  
+  {
+    name: 'Clicker Heroes',
+    image: 'http://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/363970/2c4d7dad61946f8a81548a21955ccdcf9199364b.jpg',
+    comment: '0.1 hrs last two weeks / 136 hrs on record'
+  },
+  {
+    name: 'Assassins Creed II',
+    image: 'http://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/33230/6d29461ee9303967cb32c2142afaf9bbdb911b6f.jpg',
+    comment: '',
+  },
+]
+
+var counter = {  
+  isShown: true,
+  countName: 'Time with <a href="http://linien.top" target="_blank">Linien</a> is running...',
+  countStart: 'Mon Jul 20 2015 20:00:00 GMT+0800 (CST)',
+}
+</script>  
+```
+
 
 ## 样式展示 - Theme Styles
 
