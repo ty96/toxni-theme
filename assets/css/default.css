@@ -547,3 +547,11 @@ p>img, .mobile {
     font-size: 8px;
   }
 }
+
+.kg-width-wide img {
+  max-width: 85vw;
+}
+
+.kg-width-full img {
+  max-width: 100vw;
+}

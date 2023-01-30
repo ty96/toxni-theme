@@ -1,4 +1,13 @@
 {
   "name": "toxni",
-  "version": "1.0.0"
+  "version": "5.0.0",
+  "author": {
+    "name": "ty96",
+    "email": "ty96@foxmail.com"
+  },
+  "keywords": ["ghost-theme"],
+  "config": {
+    "posts_per_page": 10
+  },
+  "card_assets": true
 }

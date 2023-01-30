@@ -125,7 +125,7 @@
     var Browser = []
 
     var UA = navigator.userAgent
-    
+
     function compare(UA, Result, Arr) {
       Arr.forEach(function (ele) {
         if (!!UA.match(ele) && !Result.length) {
