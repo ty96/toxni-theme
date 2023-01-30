@@ -1,8 +1,17 @@
+## 前前言 - Fore-foreword
+
+- 2023-01-30 更新：
+
+看到八年前大一搞的这个主题，还写了些心得体会，不免觉得岁月不饶人。突然想复活这个主题，升级到了 `ghost@5.x`，解决了些 breaking change，现在可以正常使用，后续再抽时间把当时简单的 `code inject` 部分作以更改，慢慢找找当年对一切充满好奇的感觉吧~
+
+博客域名 toxni 找不回来了，就暂时挂在 fxxking.cool/blog 下面吧。
+
+
 ## 前言 - Foreword
 
-原文: [http://toxni.com/theme/](http://toxni.com/theme/)
+原文: [http://fxxking.cool/blog/theme/](http://fxxking.cool/blog/theme/)
 
-Original article: [http://toxni.com/theme/](http://toxni.com/theme/)
+Original article: [http://fxxking.cool/blog/theme/](http://fxxking.cool/blog/theme/)
 
 大一时就鼓捣着想自己搭一个博客，搜寻了挺长时间，最终在 `Wordpress` 和 `Ghost` 之间选择了后者。一开始就用的官方的主题，后来用了一段时间 [Allan Li](http://allan.li/) 的 [EverBlog](https://github.com/lialun/EverBlog)。最终还是决定自己构建一个主题。
 
@@ -25,15 +34,15 @@ Original article: [http://toxni.com/theme/](http://toxni.com/theme/)
 注意，你需要去后台 Code Injection 注入以下代码，这些信息将会展示到作者信息页。
 
 ```js
-<script>  
-var personalInfo = {  
+<script>
+var personalInfo = {
   School: '电子科技大学(985, 211)',
   Major: '网络工程',
-  Steam: '<a href="http://steamcommunity.com/id/toxni" target=_blank>http://steamcommunity.com/id/toxni</a>',
-  Github: '<a href="https://github.com/toxni" target=_blank>https://github.com/toxni</a>',
+  Steam: '<a href="http://steamcommunity.com/id/ty96" target=_blank>http://steamcommunity.com/id/ty96</a>',
+  Github: '<a href="https://github.com/ty96" target=_blank>https://github.com/ty96</a>',
 }
 
-var personalBooks = [  
+var personalBooks = [
   {
     name: '《Javascript权威指南》',
     image: 'https://img3.doubanio.com/lpic/s8958854.jpg',
@@ -46,7 +55,7 @@ var personalBooks = [
   },
 ]
 
-var personalGames = [  
+var personalGames = [
   {
     name: 'Clicker Heroes',
     image: 'http://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/363970/2c4d7dad61946f8a81548a21955ccdcf9199364b.jpg',
@@ -59,12 +68,12 @@ var personalGames = [
   },
 ]
 
-var counter = {  
+var counter = {
   isShown: true,
-  countName: 'Time with <a href="http://linien.top" target="_blank">Linien</a> is running...',
+  countName: 'Time with <a href="xxx" target="_blank">Linien</a> is running...',
   countStart: 'Mon Jul 20 2015 20:00:00 GMT+0800 (CST)',
 }
-</script>  
+</script>
 ```
 
 ## 设计风格 - My Design Styles
@@ -85,9 +94,9 @@ var counter = {
 
 * 中文说明
 
-[http://toxni.com/theme/](http://toxni.com/theme/)
+[http://fxxking.cool/blog/theme/](http://fxxking.cool/blog/theme/)
 
 
 * English Version
 
-[http://toxni.com/theme/](http://toxni.com/theme/)
+[http://fxxking.cool/blog/theme/](http://fxxking.cool/blog/theme/)
