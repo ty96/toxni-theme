@@ -173,8 +173,9 @@ p>img, .mobile {
 
 .listBox .arrow {
   height: 10px;
-  top: 2px;
+  top: 50%;
   left: -20px;
+  margin-top: -5px;
   position: absolute;
   display: none;
   vertical-align: bottom;

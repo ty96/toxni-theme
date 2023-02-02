@@ -4,13 +4,11 @@
 
   ;(function () {
     var userAgentBox = document.getElementById('userAgent')
-    var ipBox = document.getElementById('ip')
     var indexBox = document.getElementById('indexBox')
     var catalog = document.getElementById('catalog')
     var liList = catalog.parentNode.children
     var toggleMenu = document.getElementsByClassName('toggleMenu')[0]
     var userAgentVal = navigator.userAgent
-    var ip = window.returnCitySN.cip
     var toTop = document.getElementById('toTop')
 
     if (!!toggleMenu && window.innerWidth <= 960) {
@@ -32,10 +30,6 @@
 
     if (!!userAgentBox) {
       userAgentBox.innerText = userAgentVal
-    }
-
-    if (ipBox && ip) {
-        ipBox.innerText = ip
     }
 
     if (!!indexBox) {
